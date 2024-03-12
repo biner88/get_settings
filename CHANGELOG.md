@@ -1,3 +1,8 @@
+## 1.0.4
+
+* Add ipod2path, ipod-library:// to path , only supports IOS devices
+* Add content2path, content:// to path , only supports Android devices
+
 ## 1.0.3
 
 * Add isPad

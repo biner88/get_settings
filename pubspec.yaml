@@ -1,6 +1,6 @@
 name: get_settings
 description: get Settings
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/biner88/get_settings
 
 environment:
