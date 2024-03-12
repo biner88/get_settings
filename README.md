@@ -2,12 +2,14 @@
 
 |  Method   | IOS Support  | Android Support  |
 |  ----  | ----  | ----  |
-| getPlatformVersion  | YES | YES |
-| isiOSAppOnMac  | YES | NO |
-| getUserAgent  | YES | YES |
-| isRotationOn  | NO | YES |
-| getCPUType  | YES | NO |
-| isPad  | YES | YES |
+| getPlatformVersion  | ✅ | ✅ |
+| isiOSAppOnMac  | ✅ | ❌ |
+| getUserAgent  | ✅ | ✅ |
+| isRotationOn  | ❌ | ✅ |
+| getCPUType  | ✅ | ❌ |
+| isPad  | ✅ | ✅ |
+| ipod2path  | ✅ | ❌ |
+| content2path  | ❌ | ✅ |
 
 ## Usage
 
@@ -37,4 +39,7 @@ print(getUserAgent);
 Future<String?> getCPUType =await setting.getCPUType();
 print(getCPUType);
 //ARM,ARM64,X86,X86_64
+
+Future<String?> ipodpath =await setting.ipod2path('ipod-library://item/item.mp3?id=6894390456987001162');
+print(ipodpath);
 ```

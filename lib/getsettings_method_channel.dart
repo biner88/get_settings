@@ -43,4 +43,22 @@ class MethodChannelGetSettingsPlatform extends GetSettingsPlatform {
   Future<bool?> isPad() async {
     return await methodChannel.invokeMethod<bool>('isPad');
   }
+
+  @override
+  Future<String> ipod2path(String ipodLibraryUri, bool rewrite) async {
+    String? path = await methodChannel.invokeMethod<String>('ipod2path', {
+      'ipodLibraryUri': ipodLibraryUri,
+      'rewrite': rewrite,
+    });
+    return path ?? '';
+  }
+
+  @override
+  Future<String> content2path(String contentUri, bool rewrite) async {
+    String? path = await methodChannel.invokeMethod<String>('content2path', {
+      'contentUri': contentUri,
+      'rewrite': rewrite,
+    });
+    return path ?? '';
+  }
 }

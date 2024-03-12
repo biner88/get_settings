@@ -39,6 +39,7 @@ public class SwiftGetsettingsPlugin: NSObject, FlutterPlugin {
         }
     }
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        let args = call.arguments as? [String : Any?]
         switch call.method {
         case "isRotationOn":
             //let device = UIDevice.current
@@ -69,6 +70,19 @@ public class SwiftGetsettingsPlugin: NSObject, FlutterPlugin {
             break
         case "isPad":
             result(isPad())
+            break
+        case "ipod2path":
+            let ipodLibraryUri = args!["ipodLibraryUri"] as! String
+            let assetURL = URL.init(string: ipodLibraryUri)!
+            let rewrite = args!["rewrite"] as! Bool
+            let ipod2path = Ipod2path()
+            //
+            let targetUri =  ipod2path.export(assetURL,rewrite)
+            if(targetUri != nil){
+                result(targetUri)
+            }else{
+                result("")
+            }
             break
         default:
             result("unkown")
