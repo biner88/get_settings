@@ -1,5 +1,7 @@
 # Get Settings
 
+[![pub package](https://img.shields.io/pub/v/get_settings.svg)](https://pub.dev/packages/get_settings)
+
 Toolbox, some useful methods, not commonly used but indispensable
 
 ## Support
