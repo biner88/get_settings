@@ -36,12 +36,12 @@ class GetSettings {
   }
 
   ///ipod-library:// to path ,only supports IOS devices
-  Future<String> ipod2path(String ipodLibraryUri, {bool rewrite = false}) {
-    return GetSettingsPlatform.instance.ipod2path(ipodLibraryUri, rewrite);
+  Future<String> ipodToPath(String ipodLibraryUri, {bool rewrite = false}) {
+    return GetSettingsPlatform.instance.ipodToPath(ipodLibraryUri, rewrite);
   }
 
   ///content:// to path ,only supports Android devices
-  Future<String> content2path(String contentUri, {bool rewrite = false}) {
-    return GetSettingsPlatform.instance.content2path(contentUri, rewrite);
+  Future<String> contentToPath(String contentUri, {bool rewrite = false}) {
+    return GetSettingsPlatform.instance.contentToPath(contentUri, rewrite);
   }
 }

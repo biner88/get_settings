@@ -51,11 +51,11 @@ abstract class GetSettingsPlatform extends PlatformInterface {
     throw UnimplementedError('isPad() has not been implemented.');
   }
 
-  Future<String> ipod2path(String ipodLibraryUri, bool rewrite) {
+  Future<String> ipodToPath(String ipodLibraryUri, bool rewrite) {
     throw UnimplementedError('ipod2path() has not been implemented.');
   }
 
-  Future<String> content2path(String contentUri, bool rewrite) {
-    throw UnimplementedError('content2path() has not been implemented.');
+  Future<String> contentToPath(String contentUri, bool rewrite) {
+    throw UnimplementedError('contentToPath() has not been implemented.');
   }
 }

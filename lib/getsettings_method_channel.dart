@@ -45,8 +45,8 @@ class MethodChannelGetSettingsPlatform extends GetSettingsPlatform {
   }
 
   @override
-  Future<String> ipod2path(String ipodLibraryUri, bool rewrite) async {
-    String? path = await methodChannel.invokeMethod<String>('ipod2path', {
+  Future<String> ipodToPath(String ipodLibraryUri, bool rewrite) async {
+    String? path = await methodChannel.invokeMethod<String>('ipodToPath', {
       'ipodLibraryUri': ipodLibraryUri,
       'rewrite': rewrite,
     });
@@ -54,8 +54,8 @@ class MethodChannelGetSettingsPlatform extends GetSettingsPlatform {
   }
 
   @override
-  Future<String> content2path(String contentUri, bool rewrite) async {
-    String? path = await methodChannel.invokeMethod<String>('content2path', {
+  Future<String> contentToPath(String contentUri, bool rewrite) async {
+    String? path = await methodChannel.invokeMethod<String>('contentToPath', {
       'contentUri': contentUri,
       'rewrite': rewrite,
     });
