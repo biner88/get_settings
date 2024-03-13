@@ -14,10 +14,10 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.EventChannel;
 
-/** GetsettingsPlugin */
+/** Get settings Plugin */
 public class GetsettingsPlugin implements FlutterPlugin, MethodCallHandler {
   private MethodChannel channel;
-  private Context applicationContext;
+  private Context context;
 
   private EventChannel eventState;
   private EventChannel.EventSink eventStateSink;
@@ -42,8 +42,8 @@ public class GetsettingsPlugin implements FlutterPlugin, MethodCallHandler {
       }
     });
 
-    applicationContext = flutterPluginBinding.getApplicationContext();
-    mSettingsObserver.register(applicationContext);
+    context = flutterPluginBinding.getApplicationContext();
+    mSettingsObserver.register(context);
   }
 
   @Override
@@ -71,6 +71,20 @@ public class GetsettingsPlugin implements FlutterPlugin, MethodCallHandler {
       case "isPad":
         result.success(mSettingsObserver.isPad());
         break;
+      case "ipodToPath":
+        result.success("");
+        break;
+      case "contentToPath":
+        String contentUri = call.argument("contentUri");
+        boolean rewrite = Boolean.FALSE.equals(call.argument("rewrite"));
+        ContentToPath contentToPath = new ContentToPath(context);
+        String targetUri = contentToPath.export(contentUri,rewrite);
+        if (targetUri!=null){
+          result.success(targetUri);
+        }else{
+          result.success("");
+        }
+        break;
       default:
         result.notImplemented();
         break;
@@ -81,7 +95,7 @@ public class GetsettingsPlugin implements FlutterPlugin, MethodCallHandler {
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
     channel.setMethodCallHandler(null);
     eventState.setStreamHandler(null);
-    applicationContext = null;
+    context = null;
     mSettingsObserver.stop();
   }
 }
