@@ -1,3 +1,7 @@
+## 1.0.4+1
+
+* update description
+
 ## 1.0.4
 
 * Add ipod2path, ipod-library:// to path , only supports IOS devices
