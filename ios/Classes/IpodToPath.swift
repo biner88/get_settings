@@ -4,10 +4,10 @@ import AVFoundation
 import AVKit
 import AssetsLibrary
 
-public class Ipod2path {
+public class IpodToPath {
     func export(_ assetURL: URL,_ rewrite: Bool) -> String?{
         guard assetURL.scheme == "ipod-library" else {
-           return nil
+            return nil
         }
         var ipodId = ""
         if let value = URLComponents(url: assetURL, resolvingAgainstBaseURL: false)?.queryItems?.first(where: { $0.name == "id" })?.value {

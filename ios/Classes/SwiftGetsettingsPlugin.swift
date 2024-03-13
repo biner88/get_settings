@@ -71,18 +71,21 @@ public class SwiftGetsettingsPlugin: NSObject, FlutterPlugin {
         case "isPad":
             result(isPad())
             break
-        case "ipod2path":
+        case "ipodToPath":
             let ipodLibraryUri = args!["ipodLibraryUri"] as! String
             let assetURL = URL.init(string: ipodLibraryUri)!
             let rewrite = args!["rewrite"] as! Bool
-            let ipod2path = Ipod2path()
+            let ipodToPath = IpodToPath()
             //
-            let targetUri =  ipod2path.export(assetURL,rewrite)
+            let targetUri =  ipodToPath.export(assetURL,rewrite)
             if(targetUri != nil){
                 result(targetUri)
             }else{
                 result("")
             }
+            break
+        case "contentToPath":
+            result("")
             break
         default:
             result("unkown")
