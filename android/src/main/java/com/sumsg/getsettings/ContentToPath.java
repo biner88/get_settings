@@ -44,11 +44,11 @@ public class ContentToPath {
                     return outFilePath;
                 }
             }
-             if (copyFile(filePath,outFilePath)){
-                 return outFilePath;
-             }else{
-                 return "";
-             }
+            if (copyFile(filePath,outFilePath)){
+                return outFilePath;
+            }else{
+                return "";
+            }
         }
         return null;
     }

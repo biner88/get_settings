@@ -25,6 +25,27 @@ final setting = GetSettings();
 
 ```
 
+### Uri to file
+
+Use [on_audio_query](https://pub.dev/packages/on_audio_query) to obtain the uri of the audio file. This method can obtain the absolute path of the file.
+
+* `content://` to filepath , app cache dir, Android Only.
+* `ipod-library` to filepath, app document dir, IOS Only.
+
+Android:
+<uses-permission android:name="android.permission. WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+<uses-permission android:name="android.permission. READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+<application android:requestLegacyExternalStorage="true">...</application>
+
+```dart
+
+Future<String> ipodPath = await setting.ipodToPath('ipod-library://item/item.mp3?id=6894390456987001162'); 
+print(ipodPath); 
+
+Future<String> contentPath = await setting.contentToPath('content://media/external/audio/media/1000000346'); 
+print(ipodpath); 
+```
+
 ### Rotation On
 
 Android Only
@@ -71,20 +92,4 @@ IOS Only
 Future<String?> getCPUType =await setting.getCPUType();
 print(getCPUType);
 //ARM,ARM64,X86,X86_64
-```
-
-### Uri to file
-
-Use [on_audio_query](https://pub.dev/packages/on_audio_query) to obtain the uri of the audio file. This method can obtain the absolute path of the file.
-
-* `content://` to filepath , app cache dir, Android Only.
-* `ipod-library` to filepath, app document dir, IOS Only.
-
-```dart
-
-Future<String> ipodPath = await setting.ipodToPath('ipod-library://item/item.mp3?id=6894390456987001162'); 
-print(ipodPath); 
-
-Future<String> contentPath = await setting.contentToPath('content://media/external/audio/media/1000000346'); 
-print(ipodpath); 
 ```
