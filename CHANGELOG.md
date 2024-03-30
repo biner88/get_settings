@@ -1,3 +1,7 @@
+## 1.0.4+3
+
+* fix ipodToPath
+
 ## 1.0.4+2
 
 * update readme
@@ -8,12 +12,12 @@
 
 ## 1.0.4
 
-* Add ipod2path, ipod-library:// to path , only supports IOS devices
-* Add content2path, content:// to path , only supports Android devices
+* add ipod2path, ipod-library:// to path , only supports IOS devices
+* add content2path, content:// to path , only supports Android devices
 
 ## 1.0.3
 
-* Add isPad
+* add isPad
 
 ## 1.0.2
 
@@ -25,19 +29,19 @@
 
 ## 1.0.0
 
-* Fixed IOS getUserAgent
+* fix IOS getUserAgent
 
 ## 0.0.9
 
-* Fixed getUserAgent
+* fix getUserAgent
 
 ## 0.0.8
 
-* Add getUserAgent
+* add getUserAgent
 
 ## 0.0.7
 
-* Add isiOSAppOnMac
+* add isiOSAppOnMac
 
 ## 0.0.5
 
@@ -45,11 +49,11 @@
 
 ## 0.0.5
 
-* Fix IOS.
+* fix IOS.
 
 ## 0.0.2
 
-* Add example.
+* add example.
 
 ## 0.0.1
 

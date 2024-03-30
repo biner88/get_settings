@@ -77,11 +77,15 @@ public class SwiftGetsettingsPlugin: NSObject, FlutterPlugin {
             let rewrite = args!["rewrite"] as! Bool
             let ipodToPath = IpodToPath()
             //
-            let targetUri =  ipodToPath.export(assetURL,rewrite)
-            if(targetUri != nil){
-                result(targetUri)
-            }else{
-                result("")
+            DispatchQueue.global().async {
+                do {
+                    let targetUri =  ipodToPath.export(assetURL,rewrite)
+                    if(targetUri != nil){
+                        result(targetUri)
+                    }else{
+                        result("")
+                    }
+                }
             }
             break
         case "contentToPath":

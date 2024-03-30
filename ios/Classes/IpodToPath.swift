@@ -38,6 +38,7 @@ public class IpodToPath {
         }
         exporter.outputURL = outputURL
         exporter.outputFileType = AVFileType.m4a
+        //
         let exportSemaphore = DispatchSemaphore(value: 0)
         exporter.exportAsynchronously {
             exportSemaphore.signal()
