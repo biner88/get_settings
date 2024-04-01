@@ -80,10 +80,9 @@ public class SwiftGetsettingsPlugin: NSObject, FlutterPlugin {
             DispatchQueue.global().async {
                 do {
                     let targetUri =  ipodToPath.export(assetURL,rewrite)
-                    if(targetUri != nil){
-                        result(targetUri)
-                    }else{
-                        result("")
+                    var targetUriResult = targetUri ?? ""
+                    DispatchQueue.main.async {
+                        result(targetUriResult)
                     }
                 }
             }

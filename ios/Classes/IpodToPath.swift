@@ -30,6 +30,10 @@ public class IpodToPath {
         }
         //
         let asset = AVURLAsset(url: assetURL)
+        
+//        let audioFile = try! AVAudioFile(forReading: assetURL)
+//        print("audioFile:\(audioFile.url)")
+        
         guard let exporter = AVAssetExportSession(
             asset: asset,
             presetName: AVAssetExportPresetAppleM4A
@@ -44,12 +48,11 @@ public class IpodToPath {
             exportSemaphore.signal()
         }
         _ = exportSemaphore.wait(timeout: .distantFuture)
-        
+    
         if exporter.status == .completed {
             return outputURL.path
         } else {
             return nil
         }
-        
     }
 }
