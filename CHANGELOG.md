@@ -1,3 +1,7 @@
+## 1.0.5
+
+* Add privacy manifest
+
 ## 1.0.4+4
 
 * fix ipodToPath
