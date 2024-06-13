@@ -1,3 +1,7 @@
+## 1.0.6
+
+* Add namespace to support gradle 8.x
+
 ## 1.0.5
 
 * Add privacy manifest
