@@ -1,6 +1,6 @@
-# getsettings_example
+# get_settings_example
 
-Demonstrates how to use the getsettings plugin.
+Demonstrates how to use the get_settings plugin.
 
 ## Getting Started
 

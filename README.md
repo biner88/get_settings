@@ -6,16 +6,16 @@ Toolbox, some useful methods, not commonly used but indispensable
 
 ## Support
 
-|  Method   | IOS Support  | Android Support  |
-|  ----  | ----  | ----  |
-| getPlatformVersion  | ✅ | ✅ |
-| isiOSAppOnMac  | ✅ | ❌ |
-| getUserAgent  | ✅ | ✅ |
-| isRotationOn  | ❌ | ✅ |
-| getCPUType  | ✅ | ❌ |
-| isPad  | ✅ | ✅ |
-| ipodToPath  | ✅ | ❌ |
-| contentToPath  | ❌ | ✅ |
+|  Method   | IOS Support  | Android Support  | Web Support  | Windows Support | MacOS Support |
+|  ----  | ----  | ----  | ----  | ----  | ----  |
+| getPlatformVersion  | Yes | Yes | Yes | Yes | Yes |
+| isiOSAppOnMac       | Yes |     |     |     |     |
+| getUserAgent        | Yes | Yes | Yes | Yes | Yes |
+| isRotationOn        |     | Yes |     |     |     |
+| getCPUType          | Yes | Yes |     |     | Yes |
+| isPad               | Yes | Yes | Yes |     |     |
+| ipodToPath          | Yes |     |     |     |     |
+| contentToPath       |     | Yes |     |     |     |
 
 ## Usage
 
