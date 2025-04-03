@@ -10,9 +10,9 @@ Toolbox, some useful methods, not commonly used but indispensable
 |  ----  | ----  | ----  | ----  | ----  | ----  |
 | getPlatformVersion  | Yes | Yes | Yes | Yes | Yes |
 | isiOSAppOnMac       | Yes |     |     |     |     |
-| getUserAgent        | Yes | Yes | Yes | Yes | Yes |
+| getUserAgent        | Yes | Yes | Yes |     | Yes |
 | isRotationOn        |     | Yes |     |     |     |
-| getCPUType          | Yes | Yes |     |     | Yes |
+| getCPUType          | Yes | Yes |     | Yes | Yes |
 | isPad               | Yes | Yes | Yes |     |     |
 | ipodToPath          | Yes |     |     |     |     |
 | contentToPath       |     | Yes |     |     |     |
