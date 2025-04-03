@@ -1,7 +1,9 @@
 name: get_settings
 description: Toolbox, some useful methods, not commonly used but indispensable
-version: 1.0.6
+version: 1.0.7
 homepage: https://github.com/biner88/get_settings
+repository: https://github.com/biner88/get_settings
+issue_tracker: https://github.com/biner88/get_settings/issues
 
 environment:
   sdk: ^3.7.0
