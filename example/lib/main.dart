@@ -33,7 +33,9 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    platformVersion = await _getsettingsPlugin.getPlatformVersion() ?? 'Unknown platform version';
+    platformVersion =
+        await _getsettingsPlugin.getPlatformVersion() ??
+        'Unknown platform version';
     isPad = (await _getsettingsPlugin.isPad()).toString();
     isiOSAppOnMac = (await _getsettingsPlugin.isiOSAppOnMac()).toString();
     getUserAgent = (await _getsettingsPlugin.getUserAgent())!;
@@ -51,12 +53,30 @@ class _MyAppState extends State<MyApp> {
           padding: EdgeInsets.all(15),
           child: ListView(
             children: [
-              ListTile(title: _buildTitle('Is Pad'), subtitle: _buildText(isPad)),
-              ListTile(title: _buildTitle('Platform Version'), subtitle: _buildText(platformVersion)),
-              ListTile(title: _buildTitle('IOS App On Mac'), subtitle: _buildText(isiOSAppOnMac)),
-              ListTile(title: _buildTitle('User Agent'), subtitle: _buildText(getUserAgent)),
-              ListTile(title: _buildTitle('CPU Type'), subtitle: _buildText(getCPUType)),
-              ListTile(title: _buildTitle('Rotation Lock State'), subtitle: _buildText(getRotationOn)),
+              ListTile(
+                title: _buildTitle('Is Pad'),
+                subtitle: _buildText(isPad),
+              ),
+              ListTile(
+                title: _buildTitle('Platform Version'),
+                subtitle: _buildText(platformVersion),
+              ),
+              ListTile(
+                title: _buildTitle('IOS App On Mac'),
+                subtitle: _buildText(isiOSAppOnMac),
+              ),
+              ListTile(
+                title: _buildTitle('User Agent'),
+                subtitle: _buildText(getUserAgent),
+              ),
+              ListTile(
+                title: _buildTitle('CPU Type'),
+                subtitle: _buildText(getCPUType),
+              ),
+              ListTile(
+                title: _buildTitle('Rotation Lock State'),
+                subtitle: _buildText(getRotationOn),
+              ),
             ],
           ),
         ),
@@ -72,7 +92,10 @@ class _MyAppState extends State<MyApp> {
   }
 
   Widget _buildTitle(String text) {
-    return Text(text, style: const TextStyle(fontSize: 20, color: Colors.black45));
+    return Text(
+      text,
+      style: const TextStyle(fontSize: 20, color: Colors.black45),
+    );
   }
 
   Widget _buildText(String text) {
