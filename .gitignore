@@ -29,5 +29,4 @@ migrate_working_dir/
 .packages
 build/
 example/android/app/.cxx/
-pubspec.yaml
 example/macos/DerivedData/
