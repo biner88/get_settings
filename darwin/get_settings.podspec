@@ -13,7 +13,7 @@ Get Settings.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Sumsg' => 'sumsg@outlook.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'get_settings/Sources/get_settings/**/*.swift'
   s.ios.dependency 'Flutter'
   s.osx.dependency 'FlutterMacOS'
   s.ios.deployment_target = '12.0'

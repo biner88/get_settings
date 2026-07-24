@@ -1,7 +1,6 @@
 import Foundation
 #if os(iOS)
 import UIKit
-import AssetsLibrary
 #elseif os(macOS)
 import AppKit
 #endif
